@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi niña hermosa</title>
+    
+    <!-- Fuentes (Google Fonts) -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Iconos (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animaciones (Animate.css) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- 1. PÁGINA DE BIENVENIDA -->
+    <section id="intro" class="screen active">
+        <div class="content-center animate__animated animate__zoomIn">
+            <img src="assets/Bt21 Shooky Sticker by Empório Lunari.gif" alt="Shooky" class="main-img" id="intro-img"> 
+            <h1>Una sorpresa especial para ti 💖</h1>
+            <button onclick="iniciarSorpresa()" class="btn-cute">Sí, por favor ✨</button>
+        </div>
+    </section>
+
+    <!-- 2. MENÚ PRINCIPAL -->
+    <section id="menu" class="screen hidden relative-container">
+        
+        <img src="assets/my little pony pixel STICKER (1).gif" alt="Pony 1" class="floating-char char-left animate__animated animate__fadeInLeft animate__delay-1s">
+        <img src="assets/my little pony pixel STICKER.gif" alt="Pony 2" class="floating-char char-right animate__animated animate__fadeInRight animate__delay-1s">
+
+        <div class="content-center menu-container">
+            <h2 class="menu-title animate__animated animate__fadeInDown">Sorpresaaaa mi amor!!! 💖</h2>
+            <p class="menu-subtitle animate__animated animate__fadeIn">Elige una cartita para descubrir qué hay dentro</p>
+            
+            <!-- REPRODUCTOR CANCIÓN PRINCIPAL SPOTIFY -->
+            <div class="sc-player-container animate__animated animate__fadeIn">
+                <p class="sc-dedicatoria">Dale play, amor, ponla en el minuto dosh 🥺👇</p>
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7LpY1rFYJINvy3WQyC95tD?utm_source=generator&si=37f549850b83411d" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            
+            <div class="cards-grid">
+                <div class="magic-card animate__animated animate__fadeInUp" onclick="goToScreen('seccion1')" style="animation-delay: 0.1s;">
+                    <div class="card-icon"><i class="fa-solid fa-heart"></i></div>
+                    <h3>Lo que amo</h3>
+                    <p>Pequeñas razones por las que me encantas.</p>
+                </div>
+                
+                <div class="magic-card animate__animated animate__fadeInUp" onclick="goToScreen('seccion2')" style="animation-delay: 0.2s;">
+                    <div class="card-icon"><i class="fa-solid fa-music"></i></div>
+                    <h3>Una Playlist para ti, amorcito</h3>
+                    <p>Canciones para ti (y un poco de Yoongi).</p>
+                </div>
+
+                <div class="magic-card animate__animated animate__fadeInUp" onclick="goToScreen('seccion3')" style="animation-delay: 0.3s;">
+                    <div class="card-icon"><i class="fa-solid fa-gamepad"></i></div>
+                    <h3>Recuerdos</h3>
+                    <p>Nuestras aventuras juntos.</p>
+                </div>
+                
+                <div class="magic-card animate__animated animate__fadeInUp" onclick="goToScreen('seccion4')" style="animation-delay: 0.4s;">
+                    <div class="card-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+                    <h3>Carta para ti</h3>
+                    <p>Algo muy especial que te escribí.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 1: Lo que amo de ti -->
+    <section id="seccion1" class="screen hidden">
+        <button onclick="goToScreen('menu')" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Volver</button>
+        <div class="animate__animated animate__fadeIn">
+            <h2 class="title-section">Todo esto es para ti amor</h2>
+            <div class="reasons-container">
+                <div class="bubble b1">Amo tu sonrisa</div>
+                <div class="bubble b2">Eres mi niña hermosa</div>
+                
+                <img src="assets/Min Yoongi Bts Army Sticker.gif" alt="Yoongi" class="center-bias">
+                
+                <div class="bubble b3">Me haces muy feliz</div>
+                <div class="bubble b4">Eres lo más lindo</div>
+                <div class="bubble b5">Eres una mujer increíble</div>
+                <div class="bubble b6">Eres perfecta ante mis ojos</div>
+                <div class="bubble b7">Eres la mejor novia</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: Nuestra Playlist -->
+    <section id="seccion2" class="screen hidden">
+        <button onclick="goToScreen('menu')" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Volver</button>
+        <div class="animate__animated animate__fadeIn">
+            <h2 class="title-section">Una Playlist Para ti, amorcito🎧</h2>
+            <p class="subtitle" style="text-align:center;">Un poquito de BTS, Bad Bunny y canciones que me recuerdan a ti.</p>
+            <div class="spotify-container">
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7jQ5iVKjZ1tOxaThbqAqJt?utm_source=generator&si=7ef5b1211c454cc6" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: Nuestros Recuerdos -->
+    <section id="seccion3" class="screen hidden">
+        <button onclick="goToScreen('menu')" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Volver</button>
+        <div class="animate__animated animate__fadeIn w-full-center">
+            <h2 class="title-section">Nuestros Recuerdos 🎮</h2>
+            <div class="polaroid-gallery">
+                <div class="polaroid">
+                    <img src="assets/Captura de pantalla 2026-08-07 183555.png" alt="Roblox 1">
+                </div>
+                <div class="polaroid p-tilt">
+                    <img src="assets/Captura de pantalla 2026-08-07 183654.png" alt="Roblox 2">
+                </div>
+                <div class="polaroid p-tilt-left">
+                    <img src="assets/Captura de pantalla 2026-06-23 003141.png" alt="Roblox 3">
+                </div>
+                <div class="polaroid p-tilt">
+                    <img src="assets/Captura de pantalla 2026-06-14 010449.png" alt="Roblox 4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: Carta para ti -->
+    <section id="seccion4" class="screen hidden">
+        <button onclick="goToScreen('menu')" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Volver</button>
+        <div class="animate__animated animate__fadeIn w-full-center">
+            <h2 class="title-section">Carta para Azura 💌</h2>
+            <div class="letter-container">
+                <p>
+                    Holaa, zuzu, te amo demasiado, amorcito, estoy escribiendo de vuelta esto porque hay cosas nuevas que me gustaria agregar jijiji. Eres lo que mas amo en el mundo, amor, perdon si me sientes diferente, creeme que te amo demasiado y ese sentimiento no ha desaparecido, incluso ha aumentado, ha aumentado mi amor y todo lo que siento por ti, cielo. 
+                </p>
+                <p>
+                    Eres ese momento de felicidad al terminar mi dia o incluso en mi dia, te has vuelto una parte esencial de mi, de mi alma, te has vuelto mi otra mitad. Tu eres el amor, eres ese sentmiento, ese amor, ese querer, eres esas ansias que me dan de querer tenerte a mi lado en cada momento, eres ese nerviosismo que siento al verte, eres esa felicidad que encuentro siempre a tu lado, eres la persona que deseo y se que quiero conmigo. 
+                </p>
+                <p>
+                    Tu, tu eres lo que mas amo en la vida, lo que siempre he querido y quiero tener, quiero casarme contigo, quiero que todos sepan quien es la mujer que amo, quien es mi felicidad. Te amo demasiado y para mi eres una increible novia, una que no cambiaria por nada, amo tus besos, tus abrazos, tus caricias y tu calidez, tu amor, tu sonrisas, y esas miradas que me derriten, amo cada parte de ti, cada inseguridad, cada imperfeccion, para mi todo eso es hermoso, desaria besar cada inseguridad y hacerte ver que para mis ojos eres perfecta, mi princesa.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
